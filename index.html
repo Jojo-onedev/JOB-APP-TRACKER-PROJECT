@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Job Application</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+  
+    <header class="header">
+        <div class="header-container">
+            <div class="title">
+                <h1>Job Application Tracker</h1>
+            </div>
+            <div class="img">
+                <img src="workicon-removebg-preview.png"  width="90px">
+            </div>
+        </div>
+    </header>
+
+    <section class="info-container">
+        <h2>Enter your job informations</h2>
+        <form class="my-form" onsubmit="addInfo(event)">
+            <div class="input-group">
+                <input type="text" id="company" placeholder="Company name">
+            </div>
+            <div class="input-group">
+                <input type="text" id="position" placeholder="Position">
+            </div>
+            <div class="input-group">
+                <input type="date" id="date" placeholder="Date">
+            </div>
+            <div class="input-group">
+                <select id="statut">
+                    <option >Statut</option>
+                    <option>Postulé</option>
+                    <option>Entretient programmé</option>
+                    <option >Rejeté</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <textarea id="note" placeholder="Your note"></textarea>
+            </div>
+            <button type="submit" onclick="addInfo()">Applied</button>
+        </form>
+    </section>
+
+    <section class="data-section">
+        <h2>Application</h2>
+        <table id="mytable">
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Position</th>
+                    <th>Date</th>
+                    <th>Statut</th>
+                    <th>Notes</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+    <script src="js/apps.js"></script>
+</body>
+</html>
